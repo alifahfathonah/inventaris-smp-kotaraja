@@ -3,14 +3,14 @@
 <?php
 include 'functions.php';
 $row = read();
-$halaman = 'tempat'
+$halaman = 'barang'
 ?>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Tempat</title>
+    <title>Halaman Barang</title>
     <!-- third party css -->
     <link href="../../assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
     <link href="../../assets/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
@@ -86,8 +86,7 @@ $halaman = 'tempat'
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Nama Tempat</th>
-                                                <th>Kode</th>
+                                                <th>Nama Barang</th>
                                                 <th>Aksi</th>
                                             </tr>
                                         </thead>
@@ -95,8 +94,7 @@ $halaman = 'tempat'
                                             <?php foreach ($row as $key => $item) { ?>
                                                 <tr>
                                                     <td></td>
-                                                    <td><?= $item['nm_tempat'] ?></td>
-                                                    <td><?= $item['kode'] ?></td>
+                                                    <td><?= $item['nm_barang'] ?></td>
                                                     <td>
                                                         <a href="edit.php?id=<?= $item['id'] ?>" class="btn btn-warning btn-sm rounded-pill" title="Ubah"><i class="fas fa-pencil-alt"></i></a>
                                                         <a data-id="<?= $item['id'] ?>" class="btnHapus btn btn-danger btn-sm rounded-pill" title="Hapus"><i class="fas fa-trash-alt"></i></a>

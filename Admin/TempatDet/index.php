@@ -3,14 +3,14 @@
 <?php
 include 'functions.php';
 $row = read();
-$halaman = 'tempat'
+$halaman = 'tempat detail'
 ?>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Tempat</title>
+    <title>Halaman tempat detail</title>
     <!-- third party css -->
     <link href="../../assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
     <link href="../../assets/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
@@ -19,6 +19,7 @@ $halaman = 'tempat'
     <!-- third party css end -->
     <!-- Sweet Alert-->
     <link href="../../assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/libs/lightbox/css/lightbox.css" rel="stylesheet" type="text/css" />
     <?php include '../Layouts/header.php' ?>
 </head>
 
@@ -86,8 +87,13 @@ $halaman = 'tempat'
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Nama Tempat</th>
-                                                <th>Kode</th>
+                                                <th>Tempat</th>
+                                                <th>Barang</th>
+                                                <th>Jumlah</th>
+                                                <th>Baik</th>
+                                                <th>Sedang</th>
+                                                <th>Rusak</th>
+                                                <th>Gambar</th>
                                                 <th>Aksi</th>
                                             </tr>
                                         </thead>
@@ -96,7 +102,16 @@ $halaman = 'tempat'
                                                 <tr>
                                                     <td></td>
                                                     <td><?= $item['nm_tempat'] ?></td>
-                                                    <td><?= $item['kode'] ?></td>
+                                                    <td><?= $item['nm_barang'] ?></td>
+                                                    <td><?= $item['jmlh'] ?></td>
+                                                    <td><?= $item['baik'] ?></td>
+                                                    <td><?= $item['sedang'] ?></td>
+                                                    <td><?= $item['rusak'] ?></td>
+                                                    <td>
+                                                        <a href="../../assets/gambar/<?= $item['gambar'] ?>" data-lightbox="tempat_det" data-title="<?= $item['nm_tempat'] ?>">
+                                                            <img src="../../assets/gambar/<?= $item['gambar'] ?>" alt="image" class="img-fluid rounded" width="100">
+                                                        </a>
+                                                    </td>
                                                     <td>
                                                         <a href="edit.php?id=<?= $item['id'] ?>" class="btn btn-warning btn-sm rounded-pill" title="Ubah"><i class="fas fa-pencil-alt"></i></a>
                                                         <a data-id="<?= $item['id'] ?>" class="btnHapus btn btn-danger btn-sm rounded-pill" title="Hapus"><i class="fas fa-trash-alt"></i></a>
@@ -154,6 +169,7 @@ $halaman = 'tempat'
 
     <!-- Sweet Alerts js -->
     <script src="../../assets/libs/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="../../assets//libs/lightbox/js/lightbox.js"></script>
 
     <!-- Datatables init -->
     <script>
@@ -177,6 +193,8 @@ $halaman = 'tempat'
         $('body').on('click', '.btnHapus', function(e) {
             e.preventDefault();
             id = $(this).data('id')
+
+            console.info(id);
             Swal.fire({
                 title: "Yakin menghapus data ini?",
                 text: "Data yang dihapus tidak dapat dikembalikan!",
@@ -192,6 +210,16 @@ $halaman = 'tempat'
                 }
             });
         })
+    </script>
+
+    <script>
+        < script >
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true
+            })
+    </script>
+
     </script>
 </body>
 
