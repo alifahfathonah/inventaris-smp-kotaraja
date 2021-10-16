@@ -10,11 +10,9 @@
                 <a href="#" class="user-name dropdown-toggle h5 mt-2 mb-1 d-block" data-bs-toggle="dropdown" aria-expanded="false">Nama Admin</a>
             </div>
 
-            <p class="text-muted left-user-info">Admin Head</p>
-
             <ul class="list-inline">
                 <li class="list-inline-item">
-                    <a href="#">
+                    <a href="../../Auth/logout.php">
                         <i class="mdi mdi-power"></i>
                     </a>
                 </li>
