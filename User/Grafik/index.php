@@ -2,8 +2,8 @@
 <html lang="en">
 
 <?php
-include '../../Admin/TempatDet/functions.php';
-$row = read();
+include 'functions.php';
+$tempat = readTempat();
 ?>
 
 <head>
@@ -16,7 +16,6 @@ $row = read();
     <link rel="stylesheet" href="../assets/css/flaticon-2.css">
     <link rel="stylesheet" href="../assets/css/aos.css">
     <!-- Tambahan -->
-    <link href="../../assets/libs/lightbox/css/lightbox.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="saas-modern">
@@ -36,28 +35,15 @@ $row = read();
     <section id="sa-team-inner" class="sa-team-inner-section inner-page-padding">
         <div class="container mt-5">
             <div class="sa-team-=inner-contenb">
-                <h1 class=" text-center">Galeri</h1>
                 <div class="row">
-                    <?php foreach ($row as $key => $data) {
-                        if ($data['gambar'] !== 'kosong.png') { ?>
-
-                            <div class="col-lg-3 col-md-6" class="side_screen2" data-aos="fade-right" data-aos-delay="300">
-                                <div class="sa-team-inner-inner-box">
-                                    <div class="str-team-img-text position-relative">
-                                        <div class="str-team-img">
-                                            <a href="../../assets/gambar/<?= $data['gambar'] ?>" data-lightbox="tempat_detail" data-title="<?= $data['nm_tempat'] ?>">
-                                                <img src="../../assets/gambar/<?= $data['gambar'] ?>" alt="" />
-                                            </a>
-                                        </div>
-                                        <div class="text-center str-headline pera-content mt-2">
-                                            <h4><?= $data['nm_tempat'] ?></h4>
-                                            <span><?= $data['nm_barang'] ?></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                    <?php }
-                    } ?>
+                    <div class="col-12">
+                        <h3 class=" text-center">Grafik Barang</h3>
+                        <div id="chartBarang"></div>
+                    </div>
+                    <div class="col-12">
+                        <h3 class=" text-center">Grafik Tempat</h3>
+                        <div id="pieTempat"></div>
+                    </div>
                 </div>
                 <!-- <div class="saasio-pagination text-center ul-li">
                     <ul>
@@ -82,7 +68,9 @@ $row = read();
 
     <!-- JS library -->
     <?php include '../Layouts/script.php' ?>
-    <script src="../../assets//libs/lightbox/js/lightbox.js"></script>
+
+    <script src="../../assets/libs/apexchart/apexcharts.js"></script>
+    <script src="../../assets/libs/apexchart/chart_init.js"></script>
 
     <script>
         $('#header_main').attr("style", `background-color: #13c1ec;

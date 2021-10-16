@@ -10,9 +10,9 @@
                     <div class="main_menu_list clearfix float-right">
                         <nav class="main-navigation  clearfix ul-li">
                             <ul id="main-nav" class="navbar-nav text-capitalize clearfix">
-                                <li><a href="#">Dashboard</a></li>
-                                <li><a href="team.html">Grafik</a></li>
-                                <li><a href="about.html">Inventori</a></li>
+                                <li><a href="../Dashboard/">Dashboard</a></li>
+                                <li><a href="../Grafik/">Grafik</a></li>
+                                <li><a href="../Inventori/">Inventori</a></li>
                                 <li><a href="../Galeri/">Galeri</a></li>
                             </ul>
                         </nav>
@@ -35,14 +35,14 @@
                         <i class="far fa-times-circle"></i>
                     </div>
                     <div class="m-brand-logo text-center">
-                        <img src="../assets/img/saas-m/logo/f-logo.png" alt="">
+
                     </div>
                     <nav class="main-navigation  clearfix ul-li">
                         <ul id="main-nav" class="navbar-nav text-capitalize clearfix">
-                            <li><a href="#">Dashboard</a></li>
-                            <li><a href="team.html">Grafik</a></li>
-                            <li><a href="about.html">Inventori</a></li>
-                            <li><a href="team.html">Galeri</a></li>
+                            <li><a href="../Dashboard/">Dashboard</a></li>
+                            <li><a href="../Grafik/">Grafik</a></li>
+                            <li><a href="../Inventori/">Inventori</a></li>
+                            <li><a href="../Galeri/">Galeri</a></li>
                         </ul>
                     </nav>
                     <div class="sign_up_btn text-center">

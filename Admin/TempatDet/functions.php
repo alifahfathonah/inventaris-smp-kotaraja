@@ -8,11 +8,11 @@ if (isset($_GET['hapus'])) {
 }
 
 // Funtion Read 
-function read()
+function read($limit = '')
 {
     global $conn;
     // Query database
-    $query = mysqli_query($conn, "SELECT tempat_det.*,tempat.nm_tempat,barang.nm_barang FROM tempat_det INNER JOIN tempat ON tempat_det.tempat_id=tempat.id INNER JOIN barang ON tempat_det.barang_id=barang.id");
+    $query = mysqli_query($conn, "SELECT tempat_det.*,tempat.nm_tempat,barang.nm_barang FROM tempat_det INNER JOIN tempat ON tempat_det.tempat_id=tempat.id INNER JOIN barang ON tempat_det.barang_id=barang.id $limit");
     // Ambil data
     $rows = [];
     while ($data = mysqli_fetch_assoc($query)) {

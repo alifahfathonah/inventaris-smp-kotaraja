@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+include '../../Admin/TempatDet/functions.php';
+$row = read('ORDER BY `tempat_det`.`id` DESC LIMIT 8');
+?>
+
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
@@ -68,24 +73,47 @@
             <!-- /section-title -->
             <div id="featured_scroll" class="featured_content clearfix">
                 <ul>
-                    <li>
-                        <div class="featured_icon_text text-center relative-position">
-                            <div class="mem_img_text">
-                                <div class="mem_img_line relative-position">
-                                    <div class="mem_pic relative-position mb-3">
-                                        <img src="../../assets/gambar/1634340491.jpg" width="100%" class="rounded-circle" alt="">
+                    <?php foreach ($row as $key => $data) { ?>
+                        <li>
+                            <div class="featured_icon_text text-center relative-position">
+                                <div class="mem_img_text">
+                                    <div class="mem_img_line relative-position">
+                                        <div class="mem_pic relative-position mb-3">
+                                            <img src="../../assets/gambar/<?= $data['gambar'] ?>" height="150px" width="150px" class="rounded-circle" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="featured_text saas-modern-headline">
+                                        <h3><?= $data['nm_tempat'] ?></h3>
+                                        <span><?= $data['nm_barang'] ?></span>
+                                        <table class="text-white text-right m-auto">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Jumlah</td>
+                                                    <td>:</td>
+                                                    <td><?= $data['sedang'] ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Baik</td>
+                                                    <td>:</td>
+                                                    <td><?= $data['jmlh'] ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sedang</td>
+                                                    <td>:</td>
+                                                    <td><?= $data['sedang'] ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Rusak</td>
+                                                    <td>:</td>
+                                                    <td> <?= $data['rusak'] ?></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
-                                <div class="featured_text saas-modern-headline">
-                                    <h3>Easy to edit</h3>
-                                    <p>Google Ad campaigns are an effective target receptive audience they get you.</p>
-                                </div>
-                                <div class="feature_btn">
-                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#exampleModalCenter">Selengkapnya</a>
-                                </div>
                             </div>
-                        </div>
-                    </li>
+                        </li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>

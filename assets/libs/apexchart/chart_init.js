@@ -1,5 +1,6 @@
 const path = window.location.href;
 const url_barang = `${path}functions.php?barang`;
+const url_tempat_barang = `${path}functions.php?tempat_barang`;
 
 const ambilDataBarang = () => {
   return fetch(url_barang)
@@ -9,8 +10,16 @@ const ambilDataBarang = () => {
       alert(`Erro ${err}`);
     });
 };
-const ambilDataTempat = () => {
+const ambilDataTempatDet = () => {
   return fetch(url_tempat)
+    .then((response) => response.json())
+    .then((data) => data)
+    .catch((err) => {
+      alert(`Erro ${err}`);
+    });
+};
+const ambilDataTempatBarang = () => {
+  return fetch(url_tempat_barang)
     .then((response) => response.json())
     .then((data) => data)
     .catch((err) => {
@@ -82,7 +91,7 @@ const grafikBarang = async () => {
 
 // Chart tempat
 const grafikTempat = async () => {
-  const data = await ambilDataTempat();
+  const data = await ambilDataTempatDet();
   let nm_barang = [];
   let totBaik = [];
   let totSedang = [];
@@ -161,3 +170,42 @@ $("body").on("change", "#tempat_id", function () {
   $("#chartTempat").html("");
   grafikTempat();
 });
+
+// Membuat PIE dinamis
+const createNode = async () => {
+  const data = await ambilDataTempatDet();
+  console.info(data);
+};
+
+const pieTempat = () => {
+  let options = {
+    series: [14, 23, 21, 17, 15, 10, 12, 17, 21],
+    chart: {
+      type: "polarArea",
+    },
+    stroke: {
+      colors: ["#fff"],
+    },
+    fill: {
+      opacity: 0.8,
+    },
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom",
+          },
+        },
+      },
+    ],
+  };
+
+  let chart = new ApexCharts(document.querySelector("#pieTempat"), options);
+  chart.render();
+};
+
+pieTempat();
