@@ -174,7 +174,10 @@ $halaman = 'tempat detail'
     <!-- Datatables init -->
     <script>
         let myTable = $("#myTable").DataTable({
-            scrollY: 400
+            scrollY: 400,
+            order: [
+                [1, "asc"]
+            ]
         });
 
         myTable.on('order.dt search.dt', function() {
