@@ -1,0 +1,14 @@
+<script src="../assets/js/jquery.js"></script>
+<script src="../assets/js/popper.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/wow.min.js"></script>
+<script src="../assets/js/tilt.jquery.min.js"></script>
+<script src="../assets/js/aos.js"></script>
+<script src="../assets/js/owl.js"></script>
+<script src="../assets/js/slick.js"></script>
+<script src="../assets/js/jquery.barfiller.js"></script>
+<script src="../assets/js/parallax-scroll.js"></script>
+<script src="../assets/js/jquery.paroller.min.js"></script>
+<script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../assets/js/side-demo.js"></script>
+<script src="../assets/js/script.js"></script>
