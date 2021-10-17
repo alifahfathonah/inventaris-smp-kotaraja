@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 14, 2021 at 06:12 AM
+-- Generation Time: Oct 18, 2021 at 07:17 AM
 -- Server version: 8.0.26
 -- PHP Version: 8.0.11
 
@@ -45,6 +45,14 @@ CREATE TABLE `login` (
   `hak` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`id`, `username`, `password`, `hak`) VALUES
+(1, 'admin', '12345678', 'admin'),
+(2, 'kepsek', '12345678', 'kepsek');
+
 -- --------------------------------------------------------
 
 --
@@ -70,7 +78,9 @@ CREATE TABLE `tempat_det` (
   `jmlh` int NOT NULL,
   `baik` int NOT NULL,
   `sedang` int NOT NULL,
-  `rusak` int NOT NULL
+  `rusak` int NOT NULL,
+  `gambar` varchar(100) NOT NULL,
+  `ket` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -99,6 +109,7 @@ ALTER TABLE `tempat`
 -- Indexes for table `tempat_det`
 --
 ALTER TABLE `tempat_det`
+  ADD PRIMARY KEY (`id`),
   ADD KEY `tempat_id` (`tempat_id`),
   ADD KEY `barang_id` (`barang_id`);
 
@@ -116,12 +127,18 @@ ALTER TABLE `barang`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tempat`
 --
 ALTER TABLE `tempat`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tempat_det`
+--
+ALTER TABLE `tempat_det`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
