@@ -32,6 +32,12 @@
                         <span> Dashboard </span>
                     </a>
                 </li>
+                <li>
+                    <a href="../Laporan/">
+                        <i class="mdi mdi-view-dashboard"></i>
+                        <span> Laporan </span>
+                    </a>
+                </li>
 
             </ul>
 

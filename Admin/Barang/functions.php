@@ -7,7 +7,7 @@ if (isset($_GET['hapus'])) {
     delete($id);
 }
 
-// Funtion Read 
+// Function Read 
 function read()
 {
     global $conn;
