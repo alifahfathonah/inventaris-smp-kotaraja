@@ -40,10 +40,11 @@ $tempat = readTempat();
                         <h3 class=" text-center">Grafik Barang</h3>
                         <div id="chartBarang"></div>
                     </div>
-                    <div class="col-12">
+                    <!-- <div class="col-12" id="pieDinamis">
                         <h3 class=" text-center">Grafik Tempat</h3>
                         <div id="pieTempat"></div>
-                    </div>
+                    </div> -->
+
                 </div>
                 <!-- <div class="saasio-pagination text-center ul-li">
                     <ul>

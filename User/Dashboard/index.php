@@ -150,6 +150,20 @@ $row = read('ORDER BY `tempat_det`.`id` DESC LIMIT 8');
     <!-- End of featured service section
         ============================================= -->
 
+    <!-- Sesion Grafik -->
+    <section>
+        <div class="container mt-5">
+            <div class="sa-team-=inner-contenb">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class=" text-center">Grafik Barang</h3>
+                        <div id="chartBarang"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Start of footer
         ============================================= -->
     <?php include '../Layouts/footer.php' ?>
@@ -158,6 +172,9 @@ $row = read('ORDER BY `tempat_det`.`id` DESC LIMIT 8');
 
     <!-- JS library -->
     <?php include '../Layouts/script.php' ?>
+
+    <script src="../../assets/libs/apexchart/apexcharts.js"></script>
+    <script src="../../assets/libs/apexchart/chart_init.js"></script>
 </body>
 
 </html>

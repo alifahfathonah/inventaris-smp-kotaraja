@@ -11,11 +11,6 @@ if (isset($_GET['tempat'])) {
     echo grafikTempat($id);
 }
 
-if (isset($_GET['tempat_barang'])) {
-    $id = $_GET['tempat_barang'];
-    echo readTempat();
-}
-
 // Function Grafik Barang 
 function grafikBarang()
 {

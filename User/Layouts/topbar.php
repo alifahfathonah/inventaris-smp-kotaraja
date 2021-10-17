@@ -11,7 +11,7 @@
                         <nav class="main-navigation  clearfix ul-li">
                             <ul id="main-nav" class="navbar-nav text-capitalize clearfix">
                                 <li><a href="../Dashboard/">Dashboard</a></li>
-                                <li><a href="../Grafik/">Grafik</a></li>
+                                <!-- <li><a href="../Grafik/">Grafik</a></li> -->
                                 <li><a href="../Inventori/">Inventori</a></li>
                                 <li><a href="../Galeri/">Galeri</a></li>
                             </ul>
@@ -40,7 +40,7 @@
                     <nav class="main-navigation  clearfix ul-li">
                         <ul id="main-nav" class="navbar-nav text-capitalize clearfix">
                             <li><a href="../Dashboard/">Dashboard</a></li>
-                            <li><a href="../Grafik/">Grafik</a></li>
+                            <!-- <li><a href="../Grafik/">Grafik</a></li> -->
                             <li><a href="../Inventori/">Inventori</a></li>
                             <li><a href="../Galeri/">Galeri</a></li>
                         </ul>
