@@ -94,6 +94,7 @@ $halaman = 'tempat detail'
                                                 <th>Sedang</th>
                                                 <th>Rusak</th>
                                                 <th>Gambar</th>
+                                                <th>Ket</th>
                                                 <th>Aksi</th>
                                             </tr>
                                         </thead>
@@ -112,6 +113,7 @@ $halaman = 'tempat detail'
                                                             <img src="../../assets/gambar/<?= $item['gambar'] ?>" alt="image" class="img-fluid rounded" width="100">
                                                         </a>
                                                     </td>
+                                                    <td><?= $item['ket'] ?></td>
                                                     <td>
                                                         <a href="edit.php?id=<?= $item['id'] ?>" class="btn btn-warning btn-sm rounded-pill" title="Ubah"><i class="fas fa-pencil-alt"></i></a>
                                                         <a data-id="<?= $item['id'] ?>" class="btnHapus btn btn-danger btn-sm rounded-pill" title="Hapus"><i class="fas fa-trash-alt"></i></a>

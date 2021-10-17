@@ -126,6 +126,12 @@ $halaman = 'tempat detail'
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="position-relative mb-3">
+                                                    <label for="ket" class="form-label">Keterangan</label>
+                                                    <input type="text" value="<?= $data['ket'] ?>" class=" form-control" id="ket" name="ket" />
+                                                </div>
+                                            </div>
                                             <div class="col-12 col-md-4">
                                                 <div class="position-relative mb-3">
                                                     <label for="gambar" class="form-label">Gambar</label>

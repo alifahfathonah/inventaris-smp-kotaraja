@@ -116,10 +116,18 @@ $halaman = 'tempat detail'
                                             </div>
                                             <div class="col-12 col-md-6">
                                                 <div class="position-relative mb-3">
+                                                    <label for="ket" class="form-label">Keterangan</label>
+                                                    <input type="text" class="form-control" id="ket" name="ket" />
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="position-relative mb-3">
                                                     <label for="gambar" class="form-label">Gambar</label>
                                                     <input type="file" name="gambar" id="gambar" data-plugins="dropify" data-max-file-size="1M" />
                                                 </div>
                                             </div>
+
+
                                         </div>
                                         <div class="col-12 mt-2">
                                             <button type="submit" class="btn btn-primary waves-effect" name="simpan">Simpan</button>

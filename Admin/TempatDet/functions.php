@@ -54,6 +54,7 @@ function create($data)
     $baik = htmlspecialchars($data["baik"]);
     $sedang = htmlspecialchars($data["sedang"]);
     $rusak = htmlspecialchars($data["rusak"]);
+    $ket = htmlspecialchars($data["ket"]);
 
     $jmlh = $baik + $sedang + $rusak;
 
@@ -69,7 +70,7 @@ function create($data)
         $gambar = 'kosong.png';
     }
 
-    $sql = "INSERT INTO tempat_det VALUES (NULL,'$tempat_id','$barang_id','$jmlh','$baik','$sedang','$rusak','$gambar')";
+    $sql = "INSERT INTO tempat_det VALUES (NULL,'$tempat_id','$barang_id','$jmlh','$baik','$sedang','$rusak','$gambar','$ket')";
     $query = mysqli_query($conn, $sql);
 
     if ($query) {
@@ -144,6 +145,7 @@ function update($data, $id)
     $baik = htmlspecialchars($data["baik"]);
     $sedang = htmlspecialchars($data["sedang"]);
     $rusak = htmlspecialchars($data["rusak"]);
+    $ket = htmlspecialchars($data["ket"]);
 
     $jmlh = $baik + $sedang + $rusak;
 
@@ -168,9 +170,9 @@ function update($data, $id)
         }
         // Mengganti ke gambar yang baru
         move_uploaded_file($folderLama, $lokasi_gambar);
-        $sql = "UPDATE tempat_det SET tempat_id='$tempat_id', barang_id='$barang_id', jmlh='$jmlh', baik='$baik', sedang='$sedang', rusak='$rusak', gambar='$gambar' WHERE id=$id";
+        $sql = "UPDATE tempat_det SET tempat_id='$tempat_id', barang_id='$barang_id', jmlh='$jmlh', baik='$baik', sedang='$sedang', rusak='$rusak', gambar='$gambar', ket='$ket' WHERE id=$id";
     } else {
-        $sql = "UPDATE tempat_det SET tempat_id='$tempat_id', barang_id='$barang_id', jmlh='$jmlh', baik='$baik', sedang='$sedang', rusak='$rusak' WHERE id=$id";
+        $sql = "UPDATE tempat_det SET tempat_id='$tempat_id', barang_id='$barang_id', jmlh='$jmlh', baik='$baik', sedang='$sedang', rusak='$rusak', ket='$ket' WHERE id=$id";
     }
 
     $query = mysqli_query($conn, $sql);
