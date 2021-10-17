@@ -4,8 +4,8 @@ session_start();
 
 if ($_SESSION['hak'] == "") {
     header('Location:../../Auth/login.php?pesan=3');
-} elseif ($_SESSION['hak'] == "kepsek") {
-    header('Location:../../Kepsek');
+} elseif ($_SESSION['hak'] == "admin") {
+    header('Location:../../Admin');
 }
 
 ?>
@@ -34,15 +34,7 @@ if ($_SESSION['hak'] == "") {
     <!-- LOGO -->
     <div class="logo-box">
         <a href="" class="logo logo-light text-center">
-            <h5 class=" text-white mt-3">Admin Panel</h5>
-        </a>
-        <a href="" class="logo logo-dark text-center">
-            <span class="logo-sm">
-                <img src="../../assets/images/logo-sm.png" alt="" height="22">
-            </span>
-            <span class="logo-lg">
-                <img src="../../assets/images/logo-dark.png" alt="" height="16">
-            </span>
+            <h5 class="mt-3 text-black">Kepsek Panel</h5>
         </a>
     </div>
 
@@ -59,7 +51,7 @@ if ($_SESSION['hak'] == "") {
                 echo "<h4 class='page-title-main'>Halaman $halaman</h4>";
             } else {
             ?>
-                <h4 class='page-title-main'>Selamat Datang Admin Sistem Inventory SMP YPK Kotaraja</h4>
+                <h4 class='page-title-main'>Selamat Datang Kepsek di Sistem Inventory SMP YPK Kotaraja</h4>
             <?php } ?>
         </li>
 
