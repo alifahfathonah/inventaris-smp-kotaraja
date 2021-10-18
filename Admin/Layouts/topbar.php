@@ -59,7 +59,7 @@ if ($_SESSION['hak'] == "") {
                 echo "<h4 class='page-title-main'>Halaman $halaman</h4>";
             } else {
             ?>
-                <h4 class='page-title-main'>Selamat Datang Admin Sistem Inventory SMP YPK Kotaraja</h4>
+                <h4 class='page-title-main'>Selamat Datang Admin Sistem Inventaris SMP YPK Kotaraja</h4>
             <?php } ?>
         </li>
 

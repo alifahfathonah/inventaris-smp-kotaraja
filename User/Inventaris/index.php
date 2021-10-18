@@ -31,7 +31,7 @@ $row = read();
     <section id="sa-team-inner" class="sa-team-inner-section inner-page-padding">
         <div class="container">
             <div class="sa-team-=inner-contenb">
-                <h1 class=" text-center">Daftar Inventori</h1>
+                <h1 class=" text-center">Daftar Inventaris</h1>
                 <div class="row">
                     <?php foreach ($row as $key => $data) { ?>
                         <div class="col-lg-3 col-md-6" class="side_screen2" data-aos="fade-up" data-aos-delay="300">

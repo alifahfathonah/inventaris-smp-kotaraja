@@ -52,7 +52,7 @@ $html = '<!DOCTYPE html>
 
 <body>';
 
-$html .= '<h2 class="text-center">Laporan Inventori Barang</h2>
+$html .= '<h2 class="text-center">Laporan Inventaris Barang</h2>
     <table class="table center" border="1">
         <thead>
             <tr>

@@ -33,7 +33,7 @@ $row = read('ORDER BY `tempat_det`.`id` DESC LIMIT 8');
                 <div class=" saas-modern-headline pera-content text-center">
                     <h3 class=" text-white"> Selamat Datang Di Website </h3>
                     <h1 class=" text-white"> Sistem Informasi </h1>
-                    <h1 class=" display-5 text-white"> Inventori SMP YPK Kotaraja </h1>
+                    <h1 class=" display-5 text-white"> Inventaris SMP YPK Kotaraja </h1>
 
                     <div class="banner_screen">
                         <div class="screen_img relative-position">
@@ -66,8 +66,8 @@ $row = read('ORDER BY `tempat_det`.`id` DESC LIMIT 8');
         <div class="container">
             <div class="section_title text-center">
                 <div class="section_title_text saas-modern-headline pera-content">
-                    <h2>Inventori Terakhir</h2>
-                    <p>Daftar inventori yang terakhir diisi</p>
+                    <h2>Inventaris Terakhir</h2>
+                    <p>Daftar inventaris yang terakhir diisi</p>
                 </div>
             </div>
             <!-- /section-title -->

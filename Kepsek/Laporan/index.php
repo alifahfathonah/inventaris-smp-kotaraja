@@ -52,7 +52,7 @@ $halaman = 'Laporan'
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <h3 class="text-center">Laporan Inventori Barang</h3>
+                                    <h3 class="text-center">Laporan Inventaris Barang</h3>
                                     <div class="row my-3">
                                         <div class="col-12 col-md-5">
                                             <select class="form-control" data-toggle="select2" data-width="100%" name="tempat_id" id="tempat_id">
