@@ -54,21 +54,12 @@ $halaman = 'Laporan'
                                 <div class="card-body">
                                     <h3 class="text-center">Laporan Inventaris Barang</h3>
                                     <div class="row my-3">
-                                        <div class="col-12 col-md-5">
+                                        <div class="col-12 col-md-10">
                                             <select class="form-control" data-toggle="select2" data-width="100%" name="tempat_id" id="tempat_id">
                                                 <option value="" selected>Pilih Tempat</option>
                                                 <?php
                                                 foreach ($tempat as $key => $item) {
                                                     echo "<option value='{$item['id']}'>{$item['nm_tempat']}</option>";
-                                                } ?>
-                                            </select>
-                                        </div>
-                                        <div class="col-12 col-md-5">
-                                            <select class="form-control" data-toggle="select2" data-width="100%" name="barang_id" id="barang_id">
-                                                <option value="" selected>Pilih Barang</option>
-                                                <?php
-                                                foreach ($barang as $key => $item) {
-                                                    echo "<option value='{$item['id']}'>{$item['nm_barang']}</option>";
                                                 } ?>
                                             </select>
                                         </div>

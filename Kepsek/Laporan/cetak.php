@@ -1,13 +1,19 @@
 <?php
 
 include "functions.php";
-if (isset($_GET["tempat_id"]) || isset($_GET["barang_id"])) {
+$tempat_id;
+
+if (isset($_GET["tempat_id"])) {
     $tempat_id = $_GET["tempat_id"];
-    $barang_id = $_GET["barang_id"];
-    $row = readTempatDet($tempat_id, $barang_id);
+    $row = readTempatDet($tempat_id);
+    $tempatID = tempatID($tempat_id);
 } else {
+    $tempatID = tempatID();
     $row = readTempatDet();
 }
+
+
+
 
 require '../../vendor/autoload.php';
 
@@ -24,12 +30,18 @@ $html = '<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style>
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
         .text-center {
             text-align: center;
         }
 
         .table {
             border-collapse: collapse;
+            width: 100%;
         }
 
         .table th {
@@ -44,7 +56,31 @@ $html = '<!DOCTYPE html>
             margin: 0 auto;
         }
 
-        h2 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            margin: 0px;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        .mt-1 {
+            margin-top: 15px;
+        }
+
+        .mt-2 {
+            margin-top: 30px;
+        }
+
+        .mb-1 {
+            margin-bottom: 15px;
+        }
+
+        .mb-2 {
             margin-bottom: 30px;
         }
     </style>
@@ -52,39 +88,53 @@ $html = '<!DOCTYPE html>
 
 <body>';
 
-$html .= '<h2 class="text-center">Laporan Inventaris Barang</h2>
-    <table class="table center" border="1">
+$html .= '
+    <div class="container">
+    <h3 class="text-center">YAYASAN PENDIDIKAN KRISTEN DITANAH PAPUA</h3>
+    <h3 class="text-center">SMP YPK KOTARAJA JAYAPURA</h3>
+    <h2 class="text-center">SEKOLAH STANDAR NASIONAL MANDIRI</h2>
+    <h2 class="text-center">TERAKREDITASI "A"</h2>
+    <p class="text-center miring"><i>Alamat: Kompleks Pendidikan Kristen</i></p>
+    <hr> 
+    <h5 class="text-center mt-1"><u>DAFTAR INVENTARIS DAN PENGGUNAAN SARAN PRASARANA</u></h5>';
+foreach ($tempatID as $key => $tempat) {
+    $html .= '
+    <h5 class="text-center uppercase">DAFTAR INVENTARIS ' . $tempat['nm_tempat'] . '</h5>
+    <table class="table center mt-1 mb-2" border="1">
         <thead>
             <tr>
                 <th>No</th>
-                <th>Tempat</th>
+                <th>Kode</th>
                 <th>Barang</th>
                 <th>Jumlah</th>
                 <th>Baik</th>
                 <th>Sedang</th>
                 <th>Rusak</th>
+                <th>Ket</th>
             </tr>
         </thead>
         <tbody>';
 
-$no = 1;
-foreach ($row as $item) {
-    $html .= "<tr>
-                    <td>" . $no++ . "</td>
-                    <td>" . $item['nm_tempat'] . "</td>
+    $no = 1;
+    foreach ($row as $item) {
+        if ($item['tempat_id'] === $tempat['tempat_id']) {
+            $html .= "<tr>
+                    <td>" . $no . "</td>
+                    <td>" . $tempat['kode'] . str_pad($no, 2, '0', STR_PAD_LEFT) . "</td>
                     <td>" . $item['nm_barang'] . "</td>
                     <td>" . $item['jmlh'] . "</td>
                     <td>" . $item['baik'] . "</td>
                     <td>" . $item['sedang'] . "</td>
                     <td>" . $item['rusak'] . "</td>
+                    <td>" . $item['ket'] . "</td>
                 </tr>";
-};
+            $no++;
+        }
+    };
 
-$html .= '</tbody></table>';
-
-$html .= '</body></html>';
-
-// echo $html;
+    $html .= '</tbody></table>';
+}
+$html .= '</body></html></div>';
 
 
 $dompdf->loadHtml($html);
