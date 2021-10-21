@@ -86,6 +86,7 @@ if (isset($_GET["tempat_id"]) || isset($_GET["barang_id"])) {
 <body>
 
     <div class="container">
+        <img src="../../assets/images/tutwuri.png" alt="">
         <h3 class="text-center">YAYASAN PENDIDIKAN KRISTEN DITANAH PAPUA</h3>
         <h3 class="text-center">SMP YPK KOTARAJA JAYAPURA</h3>
         <h2 class="text-center">SEKOLAH STANDAR NASIONAL MANDIRI</h2>

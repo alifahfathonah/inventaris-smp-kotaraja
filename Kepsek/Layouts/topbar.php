@@ -34,7 +34,8 @@ if ($_SESSION['hak'] == "") {
     <!-- LOGO -->
     <div class="logo-box">
         <a href="" class="logo logo-light text-center">
-            <h5 class="mt-3 text-black">Kepsek Panel</h5>
+            <img src="../../assets/images/tutwuri.png" alt="" height="50" class="float-left">
+            <h5 class="text-white mt-3 d-inline float-right">Admin Panel</h5>
         </a>
     </div>
 

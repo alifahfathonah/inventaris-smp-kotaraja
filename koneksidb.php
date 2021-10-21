@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "smartspartacus", "inventaris_smp", "0909");
+$conn = mysqli_connect("localhost", "root", "", "inventaris_smp");
 
 // Check connection
 if (mysqli_connect_errno()) {

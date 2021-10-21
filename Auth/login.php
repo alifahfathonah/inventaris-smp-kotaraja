@@ -32,7 +32,7 @@
                 <div class="col-md-8 col-lg-6 col-xl-4">
                     <div class="text-center">
                         <img src="../assets/images/tutwuri.png" alt="" height="80" class="mx-auto">
-                        <h3>Sistem pesanrmasi Inventori</h3>
+                        <h3>Sistem Informasi Inventaris</h3>
                         <h3> SMP YPK Kotaraja</h3>
                         <?php
                         if (isset($_GET["pesan"])) {
@@ -61,17 +61,13 @@
                                 <?= $cetak ?>
                             </div>
                         <?php } ?>
-
                     </div>
                     <div class="card">
                         <div class="card-body p-4">
-
                             <div class="text-center mb-4">
                                 <h4 class="text-uppercase mt-0">Login</h4>
                                 <p class="">Silahkan Masukan Username dan Password</p>
-
                             </div>
-
                             <form action="proses.php" method="POST">
                                 <div class="mb-3">
                                     <label for="username" class="form-label">Username</label>
@@ -89,7 +85,6 @@
                                         <label class="form-check-label" for="checkbox-signin">Remember me</label>
                                     </div>
                                 </div>
-
                                 <div class="mb-3 d-grid text-center">
                                     <button class="btn btn-primary" type="submit"> Log In </button>
                                 </div>
