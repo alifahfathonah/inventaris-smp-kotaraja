@@ -12,6 +12,17 @@ if (isset($_GET["tempat_id"]) || isset($_GET["barang_id"])) {
     $tempatID = tempatID();
 }
 
+if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+    $url = "https://";
+else
+    $url = "http://";
+// Append the host(domain name, ip) to the URL.   
+$url .= $_SERVER['HTTP_HOST'];
+
+// Append the requested resource location to the URL   
+$url .= $_SERVER['REQUEST_URI'];
+
+echo $url;
 
 ?>
 
@@ -80,18 +91,51 @@ if (isset($_GET["tempat_id"]) || isset($_GET["barang_id"])) {
         .mb-2 {
             margin-bottom: 30px;
         }
+
+        .ml-1 {
+            margin-left: 15px;
+        }
+
+        .ml-2 {
+            margin-left: 30px;
+        }
+
+        .mr-1 {
+            margin-right: 15px;
+        }
+
+        .mr-2 {
+            margin-right: 30px;
+        }
+
+        .logoKiri {
+            position: absolute;
+            left: 100px;
+            top: 0;
+        }
+
+        .logoKanan {
+            position: absolute;
+            right: 100px;
+            top: 0;
+        }
     </style>
 </head>
 
 <body>
 
     <div class="container">
-        <img src="../../assets/images/tutwuri.png" alt="">
-        <h3 class="text-center">YAYASAN PENDIDIKAN KRISTEN DITANAH PAPUA</h3>
-        <h3 class="text-center">SMP YPK KOTARAJA JAYAPURA</h3>
-        <h2 class="text-center">SEKOLAH STANDAR NASIONAL MANDIRI</h2>
-        <h2 class="text-center">TERAKREDITASI "A"</h2>
-        <p class="text-center miring"><i>Alamat: Kompleks Pendidikan Kristen</i></p>
+        <div class="top">
+            <div class="logoKiri"><img src="../../assets/images/tutwuri.png" alt="" width="100"></div>
+            <div class="kop">
+                <h3 class="text-center">YAYASAN PENDIDIKAN KRISTEN DITANAH PAPUA</h3>
+                <h3 class="text-center">SMP YPK KOTARAJA JAYAPURA</h3>
+                <h2 class="text-center">SEKOLAH STANDAR NASIONAL MANDIRI</h2>
+                <h2 class="text-center">TERAKREDITASI "A"</h2>
+                <p class="text-center miring"><i>Alamat: Kompleks Pendidikan Kristen</i></p>
+            </div>
+            <div class="logoKanan"><img src="../../assets/images/ypk.png" alt="" width="120"></div>
+        </div>
         <hr>
         <h5 class="text-center mt-1"><u>DAFTAR INVENTARIS DAN PENGGUNAAN SARAN PRASARANA</u></h5>
         <?php

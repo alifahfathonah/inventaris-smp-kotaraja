@@ -18,8 +18,14 @@ if (isset($_GET["tempat_id"])) {
 require '../../vendor/autoload.php';
 
 use Dompdf\Dompdf;
+use Dompdf\Options;
 
 $dompdf = new Dompdf();
+$options = new Options();
+$options->setIsRemoteEnabled(true);
+
+$dompdf->setOptions($options);
+$dompdf->output();
 
 $html = '<!DOCTYPE html>
 <html lang="en">
@@ -83,6 +89,34 @@ $html = '<!DOCTYPE html>
         .mb-2 {
             margin-bottom: 30px;
         }
+
+        .ml-1 {
+            margin-left: 15px;
+        }
+
+        .ml-2 {
+            margin-left: 30px;
+        }
+
+        .mr-1 {
+            margin-right: 15px;
+        }
+
+        .mr-2 {
+            margin-right: 30px;
+        }
+
+        .logoKiri {
+            position: absolute;
+            left: 20px;
+            top: 0;
+        }
+
+        .logoKanan {
+            position: absolute;
+            right: 20px;
+            top: 0;
+        }
     </style>
 </head>
 
@@ -90,11 +124,17 @@ $html = '<!DOCTYPE html>
 
 $html .= '
     <div class="container">
-    <h3 class="text-center">YAYASAN PENDIDIKAN KRISTEN DITANAH PAPUA</h3>
-    <h3 class="text-center">SMP YPK KOTARAJA JAYAPURA</h3>
-    <h2 class="text-center">SEKOLAH STANDAR NASIONAL MANDIRI</h2>
-    <h2 class="text-center">TERAKREDITASI "A"</h2>
-    <p class="text-center miring"><i>Alamat: Kompleks Pendidikan Kristen</i></p>
+         <div class="top">
+            <div class="logoKiri"><img src="http://localhost/inventaris-smp-kotaraja/assets/images/tutwuri.png" alt="" width="80"></div>
+            <div class="kop">
+                <h4 class="text-center">YAYASAN PENDIDIKAN KRISTEN DITANAH PAPUA</h3>
+                <h4 class="text-center">SMP YPK KOTARAJA JAYAPURA</h3>
+                <h3 class="text-center">SEKOLAH STANDAR NASIONAL MANDIRI</h2>
+                <h3 class="text-center">TERAKREDITASI "A"</h2>
+                <p class="text-center miring"><i>Alamat: Kompleks Pendidikan Kristen</i></p>
+            </div>
+            <div class="logoKanan"><img src="http://localhost/inventaris-smp-kotaraja/assets/images/ypk.png" alt="" width="100"></div>
+        </div>
     <hr> 
     <h5 class="text-center mt-1"><u>DAFTAR INVENTARIS DAN PENGGUNAAN SARAN PRASARANA</u></h5>';
 foreach ($tempatID as $key => $tempat) {

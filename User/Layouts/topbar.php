@@ -4,6 +4,8 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="brand_logo">
+                        <!-- <img src="../../assets/images/tutwuri.png" width="40"> -->
+                        <img src="../../assets/images/ypk.png" width="50">
                     </div>
                 </div>
                 <div class="col-md-9">
@@ -16,9 +18,11 @@
                                 <li><a href="../Galeri/">Galeri</a></li>
                             </ul>
                         </nav>
-                        <div class="sign_up_btn   text-center">
-                            <a href="../../Auth/login.php">Login</a>
-                        </div>
+                        <a href="../../Auth/login.php">
+                            <div class="sign_up_btn   text-center">
+                                Login
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -35,7 +39,8 @@
                         <i class="far fa-times-circle"></i>
                     </div>
                     <div class="m-brand-logo text-center">
-
+                        <!-- <img src="../../assets/images/tutwuri.png" width="40"> -->
+                        <img src="../../assets/images/ypk.png" width="50">
                     </div>
                     <nav class="main-navigation  clearfix ul-li">
                         <ul id="main-nav" class="navbar-nav text-capitalize clearfix">
