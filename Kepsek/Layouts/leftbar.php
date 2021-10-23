@@ -34,7 +34,8 @@
                 </li>
                 <li>
                     <a href="../Laporan/">
-                        <i class="mdi mdi-view-dashboard"></i>
+
+                        <i class="mdi mdi-checkbox-multiple-blank-outline"></i>
                         <span> Laporan </span>
                     </a>
                 </li>

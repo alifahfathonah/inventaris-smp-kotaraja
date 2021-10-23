@@ -19,7 +19,7 @@ $halaman = 'Dashboard'
 
 <!-- body start -->
 
-<body data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "default", "showuser": true}, "topbar": {"color": "light"}'>
+<body>
     <!-- Begin page -->
     <div id="wrapper">
 
@@ -81,6 +81,10 @@ $halaman = 'Dashboard'
     <?php include '../../Admin/Layouts/script.php' ?>
     <script src="../../assets/libs/apexchart/apexcharts.js"></script>
     <script src="../../assets/libs/apexchart/chart_init.js"></script>
+
+    <script src="../Layouts/myscript.js"></script>
+
+
 </body>
 
 </html>

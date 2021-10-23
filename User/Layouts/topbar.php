@@ -19,7 +19,7 @@
                             </ul>
                         </nav>
                         <a href="../../Auth/login.php">
-                            <div class="sign_up_btn   text-center">
+                            <div class="sign_up_btn text-center">
                                 Login
                             </div>
                         </a>

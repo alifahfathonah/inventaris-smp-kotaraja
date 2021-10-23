@@ -49,7 +49,7 @@
 
                 <li>
                     <a href="../TempatDet/">
-                        <i class="mdi mdi-forum"></i>
+                        <i class="mdi mdi-forklift"></i>
                         <span> Tempat Details </span>
                     </a>
                 </li>

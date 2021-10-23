@@ -27,7 +27,7 @@ $halaman = 'Laporan'
 
 <!-- body start -->
 
-<body data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "default", "showuser": true}, "topbar": {"color": "light"}'>
+<body>
     <!-- Begin page -->
     <div id="wrapper">
 
@@ -146,6 +146,8 @@ $halaman = 'Laporan'
             window.open(`cetak.php?tempat_id=${tempat_id}&barang_id=${barang_id}`, "_blank");
         })
     </script>
+
+    <script src="../Layouts/myscript.js"></script>
 
 </body>
 
