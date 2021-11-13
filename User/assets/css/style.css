@@ -6982,7 +6982,7 @@ Sticky Menu
   animation-name: fadeInDown;
   position: fixed;
   top: -90px;
-  padding: 25px 0px;
+  padding: 0px;
   animation-timing-function: ease;
   transition: 0.3s all ease-in-out;
 }

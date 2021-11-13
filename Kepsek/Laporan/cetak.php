@@ -125,7 +125,7 @@ $html = '<!DOCTYPE html>
 $html .= '
     <div class="container">
          <div class="top">
-            <div class="logoKiri"><img src="http://hagarsawor.my.id/assets/images/tutwuri.png" alt="" width="80"></div>
+            <div class="logoKiri"><img src="http://hagarsawor.my.id/assets/images/ypk.png" alt="" width="100"></div>
             <div class="kop">
                 <h4 class="text-center">YAYASAN PENDIDIKAN KRISTEN DITANAH PAPUA</h3>
                 <h4 class="text-center">SMP YPK KOTARAJA JAYAPURA</h3>
@@ -133,7 +133,7 @@ $html .= '
                 <h3 class="text-center">TERAKREDITASI "A"</h2>
                 <p class="text-center miring"><i>Alamat: Kompleks Pendidikan Kristen</i></p>
             </div>
-            <div class="logoKanan"><img src="http://hagarsawor.my.id/assets/images/ypk.png" alt="" width="100"></div>
+            <div class="logoKanan"><img src="http://hagarsawor.my.id/assets/images/tutwuri.png" alt="" width="80"></div>
         </div>
     <hr> 
     <h5 class="text-center mt-1"><u>DAFTAR INVENTARIS DAN PENGGUNAAN SARAN PRASARANA</u></h5>';

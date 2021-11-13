@@ -75,8 +75,8 @@ $tempat = readTempat();
 
     <script>
         $('#header_main').attr("style", `background-color: #13c1ec;
-                padding-top: 20px; 
-                padding-bottom: 20px;
+                padding-top: 0px; 
+                padding-bottom: 0px;
                 `)
     </script>
 </body>

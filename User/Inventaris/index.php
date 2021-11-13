@@ -8,7 +8,7 @@ $row = read();
 
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
+    <title>Inventaris</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php include '../Layouts/header.php' ?>
     <!-- Tambahan -->
@@ -30,50 +30,50 @@ $row = read();
         ============================================= -->
     <section id="sa-team-inner" class="sa-team-inner-section inner-page-padding">
         <div class="container">
-<div class="sa-team-=inner-contenb">
-    <h1 class=" text-center">Daftar Inventaris</h1>
-    <div class="row">
-        <?php foreach ($row as $key => $data) { ?>
-            <div class="col-lg-3 col-md-6" class="side_screen2" data-aos="fade-up" data-aos-delay="300">
-                <div class="sa-team-inner-inner-box">
-                    <div class="str-team-img-text position-relative">
-                        <div class="str-team-img">
-                            <img src="../../assets/gambar/<?= $data['gambar'] ?>" alt="" />
+            <div class="sa-team-=inner-contenb">
+                <h1 class=" text-center">Daftar Inventaris</h1>
+                <div class="row">
+                    <?php foreach ($row as $key => $data) { ?>
+                        <div class="col-lg-3 col-md-6" class="side_screen2" data-aos="fade-up" data-aos-delay="300">
+                            <div class="sa-team-inner-inner-box">
+                                <div class="str-team-img-text position-relative">
+                                    <div class="str-team-img">
+                                        <img src="../../assets/gambar/<?= $data['gambar'] ?>" alt="" />
+                                    </div>
+                                    <div class="str-team-text text-center str-headline pera-content">
+                                        <h4><?= $data['nm_tempat'] ?></h4>
+                                        <span><?= $data['nm_barang'] ?></span>
+                                        <table class="text-white text-right m-auto">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Jumlah</td>
+                                                    <td>:</td>
+                                                    <td><?= $data['sedang'] ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Baik</td>
+                                                    <td>:</td>
+                                                    <td><?= $data['jmlh'] ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sedang</td>
+                                                    <td>:</td>
+                                                    <td><?= $data['sedang'] ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Rusak</td>
+                                                    <td>:</td>
+                                                    <td> <?= $data['rusak'] ?></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="str-team-text text-center str-headline pera-content">
-                            <h4><?= $data['nm_tempat'] ?></h4>
-                            <span><?= $data['nm_barang'] ?></span>
-                            <table class="text-white text-right m-auto">
-                                <tbody>
-                                    <tr>
-                                        <td>Jumlah</td>
-                                        <td>:</td>
-                                        <td><?= $data['sedang'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Baik</td>
-                                        <td>:</td>
-                                        <td><?= $data['jmlh'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sedang</td>
-                                        <td>:</td>
-                                        <td><?= $data['sedang'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Rusak</td>
-                                        <td>:</td>
-                                        <td> <?= $data['rusak'] ?></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
-            </div>
-        <?php } ?>
-    </div>
-    <!-- <div class="saasio-pagination text-center ul-li">
+                <!-- <div class="saasio-pagination text-center ul-li">
         <ul>
             <li><a href="#">1</a></li>
             <li><a href="#">2</a></li>
@@ -82,7 +82,7 @@ $row = read();
             <li><a href="#">10</a></li>
         </ul>
     </div> -->
-</div>
+            </div>
         </div>
     </section>
 
@@ -100,8 +100,8 @@ $row = read();
 
     <script>
         $('#header_main').attr("style", `background-color: #13c1ec;
-                padding-top: 20px; 
-                padding-bottom: 20px;
+                padding-top: 0px; 
+                padding-bottom: 0px;
                 `)
     </script>
 </body>

@@ -2,13 +2,14 @@
     <div class="container">
         <div class="s_main_menu">
             <div class="row">
-                <div class="col-md-3">
-                    <div class="brand_logo">
+                <div class="col-md-3 my-1">
+                    <div class="">
                         <!-- <img src="../../assets/images/tutwuri.png" width="40"> -->
-                        <img src="../../assets/images/ypk.png" width="50">
+                        <img src="../../assets/images/ypk.png" width="80">
+                        <!-- <img src="../../assets/images/tutwuri.png" width="70"> -->
                     </div>
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-9 my-3">
                     <div class="main_menu_list clearfix float-right">
                         <nav class="main-navigation  clearfix ul-li">
                             <ul id="main-nav" class="navbar-nav text-capitalize clearfix">
