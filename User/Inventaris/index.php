@@ -48,12 +48,12 @@ $row = read();
                                                 <tr>
                                                     <td>Jumlah</td>
                                                     <td>:</td>
-                                                    <td><?= $data['sedang'] ?></td>
+                                                    <td><?= $data['jmlh'] ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Baik</td>
                                                     <td>:</td>
-                                                    <td><?= $data['jmlh'] ?></td>
+                                                    <td><?= $data['baik'] ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Sedang</td>
