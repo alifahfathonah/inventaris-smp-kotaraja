@@ -63,60 +63,60 @@ $row = read('ORDER BY `tempat_det`.`id` DESC LIMIT 8');
     <!-- Start of featured service section
         ============================================= -->
     <section id="featured_service" class="featured_service_section relative-position">
-<div class="container">
-    <div class="section_title text-center">
-        <div class="section_title_text saas-modern-headline pera-content">
-            <h2>Inventaris Terakhir</h2>
-            <p>Daftar inventaris yang terakhir diisi</p>
-        </div>
-    </div>
-    <!-- /section-title -->
-    <div id="featured_scroll" class="featured_content clearfix">
-        <ul>
-            <?php foreach ($row as $key => $data) { ?>
-                <li>
-                    <div class="featured_icon_text text-center relative-position">
-                        <div class="mem_img_text">
-                            <div class="mem_img_line relative-position">
-                                <div class="mem_pic relative-position mb-3">
-                                    <img src="../../assets/gambar/<?= $data['gambar'] ?>" height="150px" width="150px" class="rounded-circle" alt="">
+        <div class="container">
+            <div class="section_title text-center">
+                <div class="section_title_text saas-modern-headline pera-content">
+                    <h2>Inventaris Terakhir</h2>
+                    <p>Daftar inventaris yang terakhir diisi</p>
+                </div>
+            </div>
+            <!-- /section-title -->
+            <div id="featured_scroll" class="featured_content clearfix">
+                <ul>
+                    <?php foreach ($row as $key => $data) { ?>
+                        <li>
+                            <div class="featured_icon_text text-center relative-position">
+                                <div class="mem_img_text">
+                                    <div class="mem_img_line relative-position">
+                                        <div class="mem_pic relative-position mb-3">
+                                            <img src="../../assets/gambar/<?= $data['gambar'] ?>" height="150px" width="150px" class="rounded-circle" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="featured_text saas-modern-headline">
+                                        <h3><?= $data['nm_tempat'] ?></h3>
+                                        <span><?= $data['nm_barang'] ?></span>
+                                        <table class="text-white text-right m-auto">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Jumlah</td>
+                                                    <td>:</td>
+                                                    <td><?= $data['sedang'] ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Baik</td>
+                                                    <td>:</td>
+                                                    <td><?= $data['jmlh'] ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sedang</td>
+                                                    <td>:</td>
+                                                    <td><?= $data['sedang'] ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Rusak</td>
+                                                    <td>:</td>
+                                                    <td> <?= $data['rusak'] ?></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="featured_text saas-modern-headline">
-                                <h3><?= $data['nm_tempat'] ?></h3>
-                                <span><?= $data['nm_barang'] ?></span>
-                                <table class="text-white text-right m-auto">
-                                    <tbody>
-                                        <tr>
-                                            <td>Jumlah</td>
-                                            <td>:</td>
-                                            <td><?= $data['sedang'] ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Baik</td>
-                                            <td>:</td>
-                                            <td><?= $data['jmlh'] ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sedang</td>
-                                            <td>:</td>
-                                            <td><?= $data['sedang'] ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Rusak</td>
-                                            <td>:</td>
-                                            <td> <?= $data['rusak'] ?></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            <?php } ?>
-        </ul>
-    </div>
-</div>
+                        </li>
+                    <?php } ?>
+                </ul>
+            </div>
+        </div>
         <div class=" line_animation">
             <div class="line_area"></div>
             <div class="line_area"></div>
@@ -157,7 +157,7 @@ $row = read('ORDER BY `tempat_det`.`id` DESC LIMIT 8');
                 <div class="row">
                     <div class="col-12">
                         <h3 class=" text-center">Grafik Barang</h3>
-                        <div id="chartBarang"></div>
+                        <div id="chartBarangDet"></div>
                     </div>
                 </div>
             </div>

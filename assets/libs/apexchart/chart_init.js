@@ -74,8 +74,95 @@ const grafikBarang = async () => {
     },
   };
 
-  let chart = new ApexCharts(document.querySelector("#chartBarang"), options);
+  // let chart = new ApexCharts(document.querySelector("#chartBarang"), options);
 
+  // chart.render();
+};
+
+const grafikBarangDet = async () => {
+  const data = await ambilDataBarang();
+  let nm_barang = [];
+  let baik = [];
+  let sedang = [];
+  let rusak = [];
+
+  data.forEach((el) => {
+    nm_barang.push(el.nm_barang);
+    baik.push(el.baik);
+    sedang.push(el.sedang);
+    rusak.push(el.rusak);
+  });
+
+  var options = {
+    series: [
+      {
+        name: "Baik",
+        data: baik,
+      },
+      {
+        name: "Sedang",
+        data: sedang,
+      },
+      {
+        name: "Rusak",
+        data: rusak,
+      },
+    ],
+    chart: {
+      type: "bar",
+      height: 350,
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: "90%",
+        endingShape: "rounded",
+        dataLabels: {
+          position: "top",
+        },
+      },
+    },
+    dataLabels: {
+      enabled: true,
+      style: {
+        fontSize: "12px",
+        fontWeight: "bold",
+        colors: ["#333"],
+      },
+      offsetY: -20,
+    },
+    stroke: {
+      show: true,
+      width: 2,
+      colors: ["transparent"],
+    },
+    xaxis: {
+      categories: nm_barang,
+    },
+    yaxis: {
+      title: {
+        text: "Total",
+      },
+    },
+    fill: {
+      opacity: 1,
+    },
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          return val;
+        },
+      },
+    },
+    theme: {
+      palette: "palette4", // upto palette10
+    },
+  };
+
+  var chart = new ApexCharts(
+    document.querySelector("#chartBarangDet"),
+    options
+  );
   chart.render();
 };
 
@@ -152,6 +239,7 @@ const grafikTempat = async () => {
 };
 
 grafikBarang();
+grafikBarangDet();
 
 // Ketika Tempat dipilih
 $("body").on("change", "#tempat_id", function () {

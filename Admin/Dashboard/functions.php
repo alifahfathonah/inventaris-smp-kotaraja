@@ -16,7 +16,7 @@ function grafikBarang()
 {
     global $conn;
     // Query database
-    $query = mysqli_query($conn, "SELECT `barang_id`,nm_barang, SUM(jmlh) AS total FROM tempat_det INNER JOIN barang ON barang.id=tempat_det.barang_id GROUP BY `barang_id`  ORDER BY nm_barang;");
+    $query = mysqli_query($conn, "SELECT `barang_id`,nm_barang, SUM(jmlh) AS baik, SUM(jmlh) AS sedang, SUM(jmlh) AS rusak FROM tempat_det INNER JOIN barang ON barang.id=tempat_det.barang_id GROUP BY `barang_id`  ORDER BY nm_barang;");
     // Ambil data
     $rows = [];
     while ($data = mysqli_fetch_assoc($query)) {
